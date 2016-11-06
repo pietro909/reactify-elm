@@ -1,0 +1,30 @@
+{
+  "name": "reactify-elm",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "standard",
+    "prebuild": "rm -rf dist",
+    "build": "babel index.js -d dist"
+  },
+  "repository": {
+    "url": "https://MoeSattler@github.com/MoeSattler/reactify-elm.git",
+    "type": "git"
+  },
+  "author": "Moritz Sattler <moritz@moezalez.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^0.14.8"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2016": "^6.16.0",
+    "react": "^0.14.8",
+    "standard": "^8.5.0"
+  }
+}
