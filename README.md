@@ -6,11 +6,15 @@ Reactify-Elm attempts to give an Elm App a React interface.
 Running example [here](https://github.com/MoeSattler/reactify-elm/tree/master/example)
 ```
 import reactify from 'reactify-elm'
-import { ElmApp } from './ElmApp'
+import { UserContactElm } from './ElmApp'
 
-const ReactComponent = reactify(ElmApp)
+const UserContactReact = reactify(UserContactElm)
 
 const Wrapper = () => (
-  <ReactComponent value="CLICK ME!" onClick={() => console.log("BINGO!")}/>
+  <UserContactReact 
+    name="John Johnson"
+    email="John@jonson.com"
+    onClick={() => console.log("BINGO!")}
+  />
 )
 ```
