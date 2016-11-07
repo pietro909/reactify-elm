@@ -3,7 +3,7 @@
 Reactify-Elm attempts to give an Elm App a React interface.
 
 ## Install
-`npm i reactify-elm -S`
+`npm i reactify-elm`
 
 ## Example
 Running example [here](https://github.com/MoeSattler/reactify-elm/tree/master/example)
