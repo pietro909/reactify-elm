@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "make": "elm-package install && webpack -d",
-    "serve": "npm run make && http-server -o"
+    "serve": "npm run make && http-server"
   },
   "dependencies": {
     "react": "~0.14.0",
