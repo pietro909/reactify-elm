@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "make": "webpack -d",
+    "make": "elm-package install && webpack -d",
     "serve": "npm run make && http-server -o"
   },
   "dependencies": {
@@ -17,6 +17,7 @@
     "babel-plugin-uglify": "^1.0.2",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
+    "elm": "^0.18.0",
     "elm-webpack-loader": "^3.0.3",
     "http-server": "^0.9.0",
     "webpack": "^1.13.1",
