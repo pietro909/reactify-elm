@@ -24,12 +24,17 @@ subscriptions model =
 
 type alias Model =
     { value : String
+    , count : Int
     }
 
+type alias Props =
+    {
+        value: String
+    }
 
-init : Model -> ( Model, Cmd Msg )
+init : Props -> ( Model, Cmd Msg )
 init props =
-    ( props, Cmd.none )
+    ( Model props.value 0, Cmd.none )
 
 
 
@@ -48,7 +53,7 @@ update msg model =
             ( { model | value = value }, Cmd.none )
 
         Click ->
-            ( model, onClick () )
+            ( { model | count = model.count + 1 }, onClick () )
 
 
 
@@ -59,10 +64,12 @@ view : Model -> Html Msg
 view model =
     div
         [ Html.Events.onClick Click ]
-        [ Html.text model.value ]
+        [ Html.text model.value
+        , Html.text (toString model.count)
+        ]
 
 
-main : Program Model Model Msg
+main : Program Props Model Msg
 main =
     Html.programWithFlags
         { init = init
