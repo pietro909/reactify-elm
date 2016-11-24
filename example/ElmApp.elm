@@ -1,7 +1,6 @@
 port module ElmApp exposing (main)
 
 import Html exposing (..)
-import Html.App as App
 import Html.Events exposing (onClick)
 
 
@@ -63,9 +62,9 @@ view model =
         [ Html.text model.value ]
 
 
-main : Program Model
+main : Program Model Model Msg
 main =
-    App.programWithFlags
+    Html.programWithFlags
         { init = init
         , view = view
         , update = update
