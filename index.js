@@ -10,7 +10,7 @@ export default elmApp => class ElmWrapper extends Component {
 
   initialize (node) {
     if (node === null) {
-            // node is unmounting
+      // node is unmounting
       return
     }
 
